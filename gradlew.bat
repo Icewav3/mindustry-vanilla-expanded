@@ -13,7 +13,7 @@
 @rem See the License for the specific language governing permissions and
 @rem limitations under the License.
 @rem
-
+--warning-mode=all
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem
