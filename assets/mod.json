@@ -3,9 +3,9 @@
   "displayName": "Vanilla Expanded",
   "author": "[#8738ff[]]Icewave[[]]",
   "description": "Vanilla Extension for Mindustry",
-  "version": "126",
+  "version": "0.01",
   "main": "VanillaExpanded.Main.Main",
-  "minGameVersion": "128",
+  "minGameVersion": "126",
   "dependencies": [],
   "hidden": false,
   "java": true

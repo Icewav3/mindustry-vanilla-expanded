@@ -20,5 +20,5 @@ public class VEXLiquid implements ContentList{
             lightColor = Color.valueOf("48cd7d").a(0.5f);
         }};
 
-    }
+    };
 }

@@ -2,7 +2,6 @@ package VanillaExpanded.Content;
 
 import arc.graphics.Color; //Idk what this is 
 
-import VanillaExpanded.Content.VEXLiquid;
 import mindustry.content.*;
 import mindustry.ctype.ContentList;
 import mindustry.entities.bullet.*;
