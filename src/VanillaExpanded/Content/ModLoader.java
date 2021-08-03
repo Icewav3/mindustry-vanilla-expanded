@@ -2,29 +2,23 @@ package VanillaExpanded.Content;
 
 import arc.*;
 import mindustry.Vars;
+import mindustry.core.ContentLoader;
 import mindustry.ctype.*;
 import mindustry.game.EventType.FileTreeInitEvent;
+import mindustry.world.modules.LiquidModule;
 
-public class ModLoader implements ContentList{
+public class ModLoader extends ContentLoader{
     private final ContentList[] contents = {
         new VEXBlocks(),
         new VEXItems(),
-        new VEXLiquid(),
+        new VEXLiquid()       
     };
 
+    @Override
     public void load(){
         for(ContentList list : contents){
             list.load();
         }
     }
 
-    public ModLoader() {
-        if (Vars.headless) {
-            Events.on(FileTreeInitEvent.class, e -> {
-                VEXSounds.load();
-            });
-        } else {
-            VEXSounds.load();
-        }
-}
 }
