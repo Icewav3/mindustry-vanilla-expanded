@@ -1,26 +1,22 @@
 package VanillaExpanded.Content;
 
-import arc.graphics.Color; //Idk what this is 
+import arc.graphics.Color; 
+import mindustry.graphics.Pal;
 
-import VanillaExpanded.Content.VEXLiquid;
 import mindustry.content.*;
 import mindustry.ctype.ContentList;
-import mindustry.entities.bullet.*;
-import mindustry.gen.Sounds;
-import mindustry.graphics.Pal;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
-import mindustry.type.UnitType;
+import mindustry.type.LiquidStack;
 import mindustry.world.Block;
-import mindustry.world.blocks.defense.turrets.ItemTurret;
+import mindustry.world.blocks.defense.*;
+import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.production.GenericCrafter;
-import mindustry.world.blocks.production.GenericSmelter;
-import mindustry.world.blocks.units.Reconstructor;
-import mindustry.world.blocks.production.LiquidConverter;
 import mindustry.world.draw.*;
-import mindustry.type.*;
+import mindustry.entities.bullet.*;
+import mindustry.gen.Sounds;
 
-import static mindustry.type.ItemStack.with;
+import static mindustry.type.ItemStack.*;
 
 public class VEXBlocks implements ContentList{
     public static Block 
@@ -28,15 +24,20 @@ public class VEXBlocks implements ContentList{
     //Crafting Blocks
         insulatorPress,
     //Liquid Makers
-        supercoolantRefinery,
+        supercoolantRefinery, exampleWaterThing,
     //Walls
-        insulatorWall, insulatorWallLarge;
-
+        insulatorWall, insulatorWallLarge,
+    //Turrets
+        heimdall
+    //Reserve
+        
+        ;
 
     @Override
     public void load(){
-        //Insert objects here.
-        supercoolantRefinery = new LiquidConverter("supercoolant-refinery"){{
+        int wallHealthMultiplier = 4;
+        //Crafters
+        supercoolantRefinery = new GenericCrafter("supercoolant-refinery"){{
             requirements(Category.crafting, with(Items.surgeAlloy, 25, Items.silicon, 30, Items.titanium, 120));
             outputLiquid = new LiquidStack(VEXLiquid.supercoolant, 0.2f);
             health = 320;
@@ -67,5 +68,52 @@ public class VEXBlocks implements ContentList{
             consumes.items(with(Items.silicon, 1, Items.plastanium, 1));
             consumes.power(1f);
         }};
+
+        //Walls
+        insulatorWall = new Wall("insulator-wall"){{
+            requirements(Category.defense, with(VEXItems.insulator, 6));
+            health = 162 * wallHealthMultiplier;
+            
+        }};
+
+        insulatorWallLarge = new Wall("insulator-wall-large"){{
+            requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 2));
+            health = 162 * 2 * wallHealthMultiplier;
+            size = 2;
+            
+        }};
+
+        //Turret
+        heimdall = new LaserTurret("heimdall"){{
+            requirements(Category.turret, with(Items.copper, 1200, Items.lead, 350, Items.graphite, 300, Items.surgeAlloy, 325, Items.silicon, 325));
+            shootEffect = Fx.shootBigSmoke2;
+            shootCone = 40f;
+            recoilAmount = 4f;
+            size = 7;
+            shootShake = 2f;
+            range = 500f;
+            reloadTime = 1f;
+            firingMoveFract = 0.5f;
+            shootDuration = 220f;
+            powerUse = 17f;
+            shootSound = VEXSounds.heimdall_charge;
+            loopSound = VEXSounds.heimdall_deep;
+            loopSoundVolume = 2f;
+
+            shootType = new ContinuousLaserBulletType(100){{
+                length = 500f;
+                hitEffect = Fx.hitMeltdown;
+                hitColor = Pal.meltdownHit;
+                drawSize = 420f;
+
+                incendChance = 0.4f;
+                incendSpread = 5f;
+                incendAmount = 1;
+                ammoMultiplier = 1f;
+            }};
+
+            health = 200 * size * size;
+        }};
     };
+
 }

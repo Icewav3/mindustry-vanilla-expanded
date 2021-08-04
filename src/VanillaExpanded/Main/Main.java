@@ -3,7 +3,8 @@ package VanillaExpanded.Main;
 
 import javax.xml.namespace.QName;
 
-import VanillaExpanded.Content.ModLoader;
+//import VanillaExpanded.Content.ModLoader;
+import VanillaExpanded.Content.*;
 import arc.Events;
 import mindustry.game.EventType.ClientLoadEvent;
 import mindustry.game.EventType.WorldLoadEvent;
@@ -23,8 +24,10 @@ public class Main extends Mod {
 
     @Override
     public void loadContent(){
-        
-        new ModLoader().load(); //Need to create a mod loader class for this one.
-                                //This is still incomplete.
-    }
+        //Load Content Here.
+        new VEXItems().load();
+        new VEXLiquid().load();
+        new VEXBlocks().load();
+        new VEXSounds().load();
+}
 }

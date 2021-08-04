@@ -6,13 +6,17 @@ import mindustry.graphics.Pal;
 import mindustry.type.*;
 
 public class VEXItems implements ContentList {
-    public static Item 
-        insulator;
+    public static Item
+        epicItem, insulator;
 
     @Override
     public void load(){
-        insulator = new Item("insulator", Color.valueOf("d42400")){{
-            flammability = 0f;
+        insulator = new Item("item-insulator", Color.valueOf("d42400")){{
+            flammability = 32f;
         }};
-    }
+
+        epicItem = new Item("Epic Item", Color.valueOf("ffffff")){{
+
+        }};
+    };
 }
