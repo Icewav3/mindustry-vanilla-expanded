@@ -31,3 +31,11 @@ public class Main extends Mod {
         new VEXSounds().load();
 }
 }
+//script loader? from what I know
+/* {let scripts = [
+    "assets/scripts/canburn",
+];
+
+for(let i of scripts){
+    require(i)
+} */
