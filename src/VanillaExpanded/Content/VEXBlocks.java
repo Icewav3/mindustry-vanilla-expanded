@@ -14,6 +14,7 @@ import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.draw.*;
 import mindustry.entities.bullet.*;
+import mindustry.world.blocks.production.LiquidConverter;
 import mindustry.gen.Sounds;
 
 import static mindustry.type.ItemStack.*;
@@ -37,7 +38,7 @@ public class VEXBlocks implements ContentList{
     public void load(){
         int wallHealthMultiplier = 4;
         //Crafters
-        supercoolantRefinery = new GenericCrafter("supercoolant-refinery"){{
+        supercoolantRefinery = new LiquidConverter("supercoolant-refinery"){{
             requirements(Category.crafting, with(Items.surgeAlloy, 25, Items.silicon, 30, Items.titanium, 120));
             outputLiquid = new LiquidStack(VEXLiquid.supercoolant, 0.2f);
             health = 320;

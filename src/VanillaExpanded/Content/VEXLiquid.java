@@ -16,7 +16,7 @@ public class VEXLiquid implements ContentList{
 
         supercoolant = new Liquid("liquid-supercoolant", Color.valueOf("48cd9e")){{
             heatCapacity = 1.8f; 
-            temperature = 0.1f; 
+            temperature = 0.25f; 
             effect = StatusEffects.freezing;
             lightColor = Color.valueOf("48cd7d").a(0.5f);
         }};
