@@ -15,8 +15,5 @@ public class VEXItems implements ContentList {
             flammability = 32f;
         }};
 
-        epicItem = new Item("Epic Item", Color.valueOf("ffffff")){{
-
-        }};
     };
 }
