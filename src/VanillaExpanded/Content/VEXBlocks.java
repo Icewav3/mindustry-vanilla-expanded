@@ -23,8 +23,8 @@ public class VEXBlocks implements ContentList{
         insulatorPress,
     //Liquid Makers
         supercoolantRefinery, exampleWaterThing,
-    //Walls
-        insulatorWall, insulatorWallLarge,
+    //Defense
+        insulatorWall, insulatorWallLarge, forceDome,
     //Turrets
         heimdall, heimdall2, heimdall3
     //Reserve
@@ -67,7 +67,22 @@ public class VEXBlocks implements ContentList{
             consumes.power(1f);
         }};
 
-        //Walls
+        //Defense
+        
+        forceDome = new ForceProjector("force-dome"){{
+            requirements(category.effect, with(Items.surgeAlloy, 250, Items.plastanium, 525, VEXItems.insulator, 125));
+            size = 5;
+            phaseRadiusBoost = 160f;
+            radius = 203.4f;
+            shieldHealth = 1500f;
+            cooldownNormal = 3f;
+            cooldownLiquid = 2.4f;
+            cooldownBrokenBase = 0.7f;
+
+            consumes.item(Items.phaseFabric).boost();
+            consumes.power(17f);
+        }};
+
         insulatorWall = new Wall("insulator-wall"){{
             requirements(Category.defense, with(VEXItems.insulator, 6));
             health = 162 * wallHealthMultiplier;
