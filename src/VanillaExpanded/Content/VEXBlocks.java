@@ -89,14 +89,13 @@ public class VEXBlocks implements ContentList{
             size = 5;
             phaseRadiusBoost = 160f;
             radius = 203.4f;
-            shieldHealth = 2500f;
+            shieldHealth = 1500f;
             cooldownNormal = 3f;
             cooldownLiquid = 2.4f;
             cooldownBrokenBase = 0.7f;
 
             consumes.item(Items.phaseFabric).boost();
-            consumes.power(4f);
-            //consumes.add(new ConsumeCoolant(0.5f)).update(false); --- this needs to be updated to something readable
+            consumes.power(17f);
         }};
 
         //Turret
