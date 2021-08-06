@@ -1,8 +1,6 @@
 package VanillaExpanded.Content;
 
-import arc.graphics.Color; 
 import mindustry.graphics.Pal;
-
 import mindustry.content.*;
 import mindustry.ctype.ContentList;
 import mindustry.type.Category;
@@ -11,11 +9,10 @@ import mindustry.type.LiquidStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.*;
 import mindustry.world.blocks.defense.turrets.*;
-import mindustry.world.blocks.production.GenericCrafter;
+import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
 import mindustry.entities.bullet.*;
-import mindustry.world.blocks.production.LiquidConverter;
-import mindustry.gen.Sounds;
+import mindustry.content.Bullets;
 
 import static mindustry.type.ItemStack.*;
 
@@ -29,7 +26,7 @@ public class VEXBlocks implements ContentList{
     //Walls
         insulatorWall, insulatorWallLarge,
     //Turrets
-        heimdall
+        heimdall, heimdall2, heimdall3
     //Reserve
         
         ;
@@ -90,6 +87,68 @@ public class VEXBlocks implements ContentList{
             shootEffect = Fx.shootBigSmoke2;
             shootCone = 40f;
             recoilAmount = 4f;
+            size = 6;
+            shootShake = 2f;
+            range = 500f;
+            reloadTime = 1f;
+            firingMoveFract = 0.5f;
+            shootDuration = 220f;
+            powerUse = 17f;
+            shootSound = VEXSounds.heimdall_charge;
+            loopSound = VEXSounds.heimdall_deep;
+            loopSoundVolume = 2f;
+
+            shootType = new ContinuousLaserBulletType(100){{
+                length = 500f;
+                hitEffect = Fx.hitMeltdown;
+                hitColor = Pal.meltdownHit;
+                drawSize = 420f;
+
+                incendChance = 0.4f;
+                incendSpread = 5f;
+                incendAmount = 1;
+                ammoMultiplier = 1f;
+            }};
+
+            health = 200 * size * size;
+        }};
+
+        heimdall2 = new LaserTurret("heimdall2"){{
+            requirements(Category.turret, with(Items.copper, 1200, Items.lead, 350, Items.graphite, 300, Items.surgeAlloy, 325, Items.silicon, 325));
+            shootEffect = Fx.shootBigSmoke2;
+            shootCone = 40f;
+            recoilAmount = 4f;
+            size = 5;
+            shootShake = 2f;
+            range = 500f;
+            reloadTime = 1f;
+            firingMoveFract = 0.5f;
+            shootDuration = 220f;
+            powerUse = 17f;
+            shootSound = VEXSounds.heimdall_charge;
+            loopSound = VEXSounds.heimdall_deep;
+            loopSoundVolume = 2f;
+
+            shootType = new ContinuousLaserBulletType(100){{
+                length = 500f;
+                hitEffect = Fx.hitMeltdown;
+                hitColor = Pal.meltdownHit;
+                drawSize = 420f;
+
+                incendChance = 0.4f;
+                incendSpread = 5f;
+                incendAmount = 1;
+                ammoMultiplier = 1f;
+            }};
+
+            health = 200 * size * size;
+        }};
+
+        heimdall3 = new LaserTurret("heimdall3"){{
+            requirements(Category.turret, with(Items.copper, 1200, Items.lead, 350, Items.graphite, 300, Items.surgeAlloy, 325, Items.silicon, 325));
+            shootEffect = Fx.shootBigSmoke2;
+            shootCone = 40f;
+            recoilAmount = 4f;
             size = 7;
             shootShake = 2f;
             range = 500f;
@@ -115,6 +174,7 @@ public class VEXBlocks implements ContentList{
 
             health = 200 * size * size;
         }};
+
     };
 
 }

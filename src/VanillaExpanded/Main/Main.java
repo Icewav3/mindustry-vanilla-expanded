@@ -29,5 +29,6 @@ public class Main extends Mod {
         new VEXLiquid().load();
         new VEXBlocks().load();
         new VEXSounds().load();
+        
 }
 }
