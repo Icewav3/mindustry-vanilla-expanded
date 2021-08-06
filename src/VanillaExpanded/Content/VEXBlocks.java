@@ -74,7 +74,7 @@ public class VEXBlocks implements ContentList{
             size = 5;
             phaseRadiusBoost = 160f;
             radius = 203.4f;
-            shieldHealth = 1500f;
+            shieldHealth = 1600f;
             cooldownNormal = 3f;
             cooldownLiquid = 2.4f;
             cooldownBrokenBase = 0.7f;
