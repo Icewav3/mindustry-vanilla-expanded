@@ -87,7 +87,7 @@ public class VEXBlocks implements ContentList{
             shootEffect = Fx.shootBigSmoke2;
             shootCone = 40f;
             recoilAmount = 4f;
-            size = 7;
+            size = 6;
             shootShake = 2f;
             range = 500f;
             reloadTime = 1f;
@@ -118,7 +118,7 @@ public class VEXBlocks implements ContentList{
             shootEffect = Fx.shootBigSmoke2;
             shootCone = 40f;
             recoilAmount = 4f;
-            size = 3;
+            size = 5;
             shootShake = 2f;
             range = 500f;
             reloadTime = 1f;
@@ -149,7 +149,7 @@ public class VEXBlocks implements ContentList{
             shootEffect = Fx.shootBigSmoke2;
             shootCone = 40f;
             recoilAmount = 4f;
-            size = 4;
+            size = 7;
             shootShake = 2f;
             range = 500f;
             reloadTime = 1f;
