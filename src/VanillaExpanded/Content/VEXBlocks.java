@@ -13,6 +13,7 @@ import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
 import mindustry.entities.bullet.*;
 import mindustry.content.Bullets;
+import mindustry.gen.Sounds;
 
 import static mindustry.type.ItemStack.*;
 
@@ -109,8 +110,8 @@ public class VEXBlocks implements ContentList{
             firingMoveFract = 0.5f;
             shootDuration = 220f;
             powerUse = 17f;
-            shootSound = VEXSounds.heimdall_charge;
-            loopSound = VEXSounds.heimdall_deep;
+            shootSound = VEXSounds.heimdallDeep;
+            loopSound = VEXSounds.heimdallBeam;
             loopSoundVolume = 2f;
 
             shootType = new ContinuousLaserBulletType(100){{
@@ -140,8 +141,8 @@ public class VEXBlocks implements ContentList{
             firingMoveFract = 0.5f;
             shootDuration = 220f;
             powerUse = 17f;
-            shootSound = VEXSounds.heimdall_charge;
-            loopSound = VEXSounds.heimdall_deep;
+            shootSound = VEXSounds.heimdallDeep;
+            loopSound = VEXSounds.heimdallBeam;
             loopSoundVolume = 2f;
 
             shootType = new ContinuousLaserBulletType(100){{
@@ -171,8 +172,8 @@ public class VEXBlocks implements ContentList{
             firingMoveFract = 0.5f;
             shootDuration = 220f;
             powerUse = 17f;
-            shootSound = VEXSounds.heimdall_charge;
-            loopSound = VEXSounds.heimdall_deep;
+            shootSound = VEXSounds.heimdallDeep;
+            loopSound = VEXSounds.heimdallBeam;
             loopSoundVolume = 2f;
 
             shootType = new ContinuousLaserBulletType(100){{
