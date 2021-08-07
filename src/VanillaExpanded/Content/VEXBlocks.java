@@ -13,6 +13,7 @@ import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
 import mindustry.entities.bullet.*;
 import mindustry.content.Bullets;
+import mindustry.gen.Sounds;
 
 import static mindustry.type.ItemStack.*;
 
@@ -90,8 +91,8 @@ public class VEXBlocks implements ContentList{
         }};
 
         insulatorWallLarge = new Wall("insulator-wall-large"){{
-            requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 2));
-            health = 162 * 2 * wallHealthMultiplier;
+            requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 4));
+            health = 162 * 4 * wallHealthMultiplier;
             size = 2;
             
         }};
@@ -109,8 +110,8 @@ public class VEXBlocks implements ContentList{
             firingMoveFract = 0.5f;
             shootDuration = 220f;
             powerUse = 17f;
-            shootSound = VEXSounds.heimdall_charge;
-            loopSound = VEXSounds.heimdall_deep;
+            shootSound = VEXSounds.heimdallDeep;
+            loopSound = VEXSounds.heimdallBeam;
             loopSoundVolume = 2f;
 
             shootType = new ContinuousLaserBulletType(100){{
@@ -140,8 +141,8 @@ public class VEXBlocks implements ContentList{
             firingMoveFract = 0.5f;
             shootDuration = 220f;
             powerUse = 17f;
-            shootSound = VEXSounds.heimdall_charge;
-            loopSound = VEXSounds.heimdall_deep;
+            shootSound = VEXSounds.heimdallDeep;
+            loopSound = VEXSounds.heimdallBeam;
             loopSoundVolume = 2f;
 
             shootType = new ContinuousLaserBulletType(100){{
@@ -171,8 +172,8 @@ public class VEXBlocks implements ContentList{
             firingMoveFract = 0.5f;
             shootDuration = 220f;
             powerUse = 17f;
-            shootSound = VEXSounds.heimdall_charge;
-            loopSound = VEXSounds.heimdall_deep;
+            shootSound = VEXSounds.heimdallDeep;
+            loopSound = VEXSounds.heimdallBeam;
             loopSoundVolume = 2f;
 
             shootType = new ContinuousLaserBulletType(100){{
