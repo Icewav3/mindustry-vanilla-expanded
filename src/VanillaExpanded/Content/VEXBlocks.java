@@ -91,8 +91,8 @@ public class VEXBlocks implements ContentList{
         }};
 
         insulatorWallLarge = new Wall("insulator-wall-large"){{
-            requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 2));
-            health = 162 * 2 * wallHealthMultiplier;
+            requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 4));
+            health = 162 * 4 * wallHealthMultiplier;
             size = 2;
             
         }};
