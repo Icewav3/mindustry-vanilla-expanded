@@ -21,13 +21,13 @@ public class VEXBlocks implements ContentList{
     public static Block 
     
     //Crafting Blocks
-        insulatorPress,
+        insulatorPress, pyratiteFactory,
     //Liquid Makers
         supercoolantRefinery, exampleWaterThing,
     //Defense
         insulatorWall, insulatorWallLarge, forceDome,
     //Turrets
-        heimdall, heimdall2, heimdall3, tsunami
+        heimdall, thunderbird, tsunami
     //Reserve
         
         ;
@@ -68,6 +68,20 @@ public class VEXBlocks implements ContentList{
             consumes.power(1f);
         }};
 
+        pyratiteFactory = new GenericCrafter("pyratite-factory"){{
+            requirements(Category.crafting, with(Items.metaglass, 75, Items.copper, 250, Items.titanium, 75));
+            outputItem = new ItemStack(Items.pyratite, 3);
+            health = 175;
+            itemCapacity = 20;
+            craftTime = 60f;
+            size = 3;
+            hasItems = true;
+            hasPower = true;
+            solid = true;
+            consumes.items(with(Items.scrap, 10, Items.sporePod, 5));
+            consumes.power(2f);
+        }};
+
         //Defense
         
         forceDome = new ForceProjector("force-dome"){{
@@ -98,7 +112,37 @@ public class VEXBlocks implements ContentList{
         }};
 
         //Turret
-        heimdall = new LaserTurret("heimdall"){{
+
+        thunderbird = new ItemTurret("thunderbird"){{
+            requirements(Category.turret, with(VEXItems.insulator, 25, Items.titanium, 250, Items.surgeAlloy, 50));
+            ammo(
+                Items.thorium, VEXBullets.autoCannonThorium,
+                Items.graphite, VEXBullets.autoCannonDense,
+                Items.surgeAlloy, Bullets.fragSurge
+                //todo: add titanium
+            );
+            maxAmmo = 10;
+            ammoPerShot = 10;
+            coolantMultiplier = 0.5f;
+            targetGround = false;
+            rotateSpeed = 1.5f;
+            ammoUseEffect = Fx.casing3;
+            recoilAmount = 4f;
+            restitution = 0.1f;
+            reloadTime = 20f;
+            spread = 8f;
+            alternate = true;
+            shootShake = 3f;
+            shots = 2;
+            size = 3;
+            range = 300f;
+            shootCone = 18f;
+            inaccuracy = 1f;
+            shootSound = VEXSounds.VEXbigman;
+            health = size * size * 100;
+        }};
+
+        /*heimdall = new LaserTurret("heimdall"){{
             requirements(Category.turret, with(Items.copper, 1200, Items.lead, 350, Items.graphite, 300, Items.surgeAlloy, 325, Items.silicon, 325));
             shootEffect = Fx.shootBigSmoke2;
             shootCone = 40f;
@@ -127,7 +171,7 @@ public class VEXBlocks implements ContentList{
             }};
 
             health = 200 * size * size;
-        }};
+        }};*/
 
     };
 

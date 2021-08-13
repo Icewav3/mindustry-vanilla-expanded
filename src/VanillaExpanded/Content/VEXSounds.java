@@ -1,11 +1,11 @@
 package VanillaExpanded.Content;
 
-
 import arc.*;
 import arc.assets.*;
 import arc.assets.loaders.*;
 import arc.audio.*;
 import mindustry.Vars;
+import mindustry.core.assets.sounds;
 
 public class VEXSounds{
   
@@ -13,14 +13,14 @@ public class VEXSounds{
     public static Sound 
        heimdallDeep = new Sound(),
        heimdallCharge = new Sound(),
-       heimdallBeam = new Sound()
-        
+       heimdallBeam = new Sound(),
+       VEXbigman = new Sound()
     ;
 
     public void load(){
         heimdallDeep = getSound("heimdalldeep");
         heimdallBeam = getSound("heimdallsuperlaser");
-
+        VEXbigman = getSound("VEXbigman");
     }
 
     public static Sound getSound(String soundName){
