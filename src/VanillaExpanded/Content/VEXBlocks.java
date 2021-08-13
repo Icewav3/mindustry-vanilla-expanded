@@ -27,7 +27,7 @@ public class VEXBlocks implements ContentList{
     //Defense
         insulatorWall, insulatorWallLarge, forceDome,
     //Turrets
-        heimdall, heimdall2, heimdall3
+        heimdall, heimdall2, heimdall3, tsunami
     //Reserve
         
         ;
@@ -104,68 +104,6 @@ public class VEXBlocks implements ContentList{
             shootCone = 40f;
             recoilAmount = 4f;
             size = 6;
-            shootShake = 2f;
-            range = 500f;
-            reloadTime = 1f;
-            firingMoveFract = 0.5f;
-            shootDuration = 220f;
-            powerUse = 17f;
-            shootSound = VEXSounds.heimdallDeep;
-            loopSound = VEXSounds.heimdallBeam;
-            loopSoundVolume = 2f;
-
-            shootType = new ContinuousLaserBulletType(100){{
-                length = 500f;
-                hitEffect = Fx.hitMeltdown;
-                hitColor = Pal.meltdownHit;
-                drawSize = 420f;
-
-                incendChance = 0.4f;
-                incendSpread = 5f;
-                incendAmount = 1;
-                ammoMultiplier = 1f;
-            }};
-
-            health = 200 * size * size;
-        }};
-
-        heimdall2 = new LaserTurret("heimdall2"){{
-            requirements(Category.turret, with(Items.copper, 1200, Items.lead, 350, Items.graphite, 300, Items.surgeAlloy, 325, Items.silicon, 325));
-            shootEffect = Fx.shootBigSmoke2;
-            shootCone = 40f;
-            recoilAmount = 4f;
-            size = 5;
-            shootShake = 2f;
-            range = 500f;
-            reloadTime = 1f;
-            firingMoveFract = 0.5f;
-            shootDuration = 220f;
-            powerUse = 17f;
-            shootSound = VEXSounds.heimdallDeep;
-            loopSound = VEXSounds.heimdallBeam;
-            loopSoundVolume = 2f;
-
-            shootType = new ContinuousLaserBulletType(100){{
-                length = 500f;
-                hitEffect = Fx.hitMeltdown;
-                hitColor = Pal.meltdownHit;
-                drawSize = 420f;
-
-                incendChance = 0.4f;
-                incendSpread = 5f;
-                incendAmount = 1;
-                ammoMultiplier = 1f;
-            }};
-
-            health = 200 * size * size;
-        }};
-
-        heimdall3 = new LaserTurret("heimdall3"){{
-            requirements(Category.turret, with(Items.copper, 1200, Items.lead, 350, Items.graphite, 300, Items.surgeAlloy, 325, Items.silicon, 325));
-            shootEffect = Fx.shootBigSmoke2;
-            shootCone = 40f;
-            recoilAmount = 4f;
-            size = 7;
             shootShake = 2f;
             range = 500f;
             reloadTime = 1f;

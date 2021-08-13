@@ -21,6 +21,7 @@ import static mindustry.content.Liquids.*;
 
 public class VEXTechtree implements ContentList{
     private static TechNode context = null;
+    @Override
     public void load(){
         //Items
         getNode(plastanium, () ->
@@ -31,12 +32,29 @@ public class VEXTechtree implements ContentList{
         getNode(cryofluid, () ->
             node(supercoolant)
         );
-        
-        //Turrets
-        getNode(meltdown, () ->
-            node(heimdall)    
+        //Crafters 
+        getNode(cryofluidMixer, () -> 
+            node(supercoolantRefinery)    
         );
 
+        getNode(plastaniumCompressor, () -> 
+            node(insulatorPress)
+        );
+
+        //Turrets
+        // getNode(meltdown, () ->
+        //     node(heimdall)    
+        // );
+
+        //Walls & Defense
+        getNode(plastaniumWall, () -> 
+            node(insulatorWall, () -> 
+                node(insulatorWallLarge)
+                ));
+
+        getNode(forceProjector, () -> 
+            node(forceDome)
+            );
 
     }
 
