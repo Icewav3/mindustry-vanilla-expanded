@@ -29,7 +29,7 @@ public class VEXSounds{
             String dir = name + ".ogg";
             
             Sound sound = new Sound();
-            AssetDescriptor<?> desc = Core.assets.load(dir, Sound.class, new SoundLoader.SoundParameter(sound));
+            AssetDescriptor<?> desc = Core.assets.load(dir, Sound.class, new SoundLoader.SoundParameter(sound)); //soundloader isn't defined
             desc.errored = Throwable::printStackTrace;
 
             return sound;

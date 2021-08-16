@@ -138,7 +138,6 @@ public class VEXBlocks implements ContentList{
             range = 300f;
             shootCone = 18f;
             inaccuracy = 1f;
-            shootSound = VEXSounds.VEXbigman;
             health = size * size * 100;
         }};
 

@@ -11,7 +11,7 @@ import mindustry.world.modules.LiquidModule;
 
 //This modloader is currently not in use.
 //Visit Main.java to load
-public class ModLoader extends ContentLoader{
+/*public class ModLoader extends ContentLoader{
     private final ContentList[] contents = {
         new VEXBlocks(),
         new VEXItems(),
@@ -26,3 +26,4 @@ public class ModLoader extends ContentLoader{
     }
 
 }
+*/

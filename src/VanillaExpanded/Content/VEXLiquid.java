@@ -9,7 +9,7 @@ import mindustry.content.Liquids;
 
 public class VEXLiquid implements ContentList{
     public static Liquid
-            explosiveRocketBeam, supercoolant, epicWater;
+            supercoolant;
 
     @Override 
     public void load() {
