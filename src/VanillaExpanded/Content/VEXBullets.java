@@ -32,14 +32,18 @@ public class VEXBullets implements ContentList{
             autoCannonDense = new BasicBulletType(12f, 75, "bullet"){{
                 hitSize = 3;
                 width = 7f;
-                height = 18f;
-                buildingDamageMultiplier = 0f;
+                height = 24f;
+                collidesGround =  false;
+                knockback = 8f;
             }};
             autoCannonThorium = new BasicBulletType(12f, 120, "bullet"){{
                 hitSize = 3;
                 width = 9f;
-                height = 18f;
-                buildingDamageMultiplier = 0f;
+                height = 24f;
+                collidesGround =  false;
+                knockback = 8f;
+                pierce = true;
+                pierceCap = 3;
             }};
         }
 }

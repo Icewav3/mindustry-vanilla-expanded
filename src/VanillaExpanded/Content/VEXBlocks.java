@@ -119,9 +119,9 @@ public class VEXBlocks implements ContentList{
             ammo(
                 Items.thorium, VEXBullets.autoCannonThorium,
                 Items.graphite, VEXBullets.autoCannonDense,
-                Items.surgeAlloy, Bullets.fragSurge
+                Items.surgeAlloy, Bullets.fragSurge //define the surge bullet type
             );
-            maxAmmo = 100;
+            maxAmmo = 20;
             ammoPerShot = 10;
             coolantMultiplier = 0.5f;
             targetGround = false;
@@ -142,7 +142,7 @@ public class VEXBlocks implements ContentList{
             health = size * size * 100;
         }};
 
-        /*heimdall = new LaserTurret("heimdall"){{
+       /* heimdall = new LaserTurret("heimdall"){{
             requirements(Category.turret, with(Items.copper, 1200, Items.lead, 350, Items.graphite, 300, Items.surgeAlloy, 325, Items.silicon, 325));
             shootEffect = Fx.shootBigSmoke2;
             shootCone = 40f;
