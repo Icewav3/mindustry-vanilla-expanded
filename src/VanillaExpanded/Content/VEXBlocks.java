@@ -102,14 +102,14 @@ public class VEXBlocks implements ContentList{
         insulatorWall = new Wall("insulator-wall"){{
             requirements(Category.defense, with(VEXItems.insulator, 6));
             health = 162 * wallHealthMultiplier;
-            
+            insulated = true;
         }};
 
         insulatorWallLarge = new Wall("insulator-wall-large"){{
             requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 4));
             health = 162 * 4 * wallHealthMultiplier;
             size = 2;
-            
+            insulated = true;
         }};
 
         //Turret
