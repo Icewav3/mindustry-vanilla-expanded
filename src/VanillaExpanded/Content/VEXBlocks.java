@@ -21,9 +21,9 @@ public class VEXBlocks implements ContentList{
     public static Block 
     
     //Crafting Blocks
-        insulatorPress, pyratiteFactory,
+        insulatorPress, pyratiteBlender,
     //Liquid Makers
-        supercoolantRefinery, exampleWaterThing,
+        supercoolantRefinery,
     //Defense
         insulatorWall, insulatorWallLarge, forceDome,
     //Turrets
@@ -58,6 +58,7 @@ public class VEXBlocks implements ContentList{
         insulatorPress = new GenericCrafter("insulator-press"){{
             requirements(Category.crafting, with(Items.metaglass, 30, Items.plastanium, 50, Items.titanium, 120));
             outputItem = new ItemStack(VEXItems.insulator, 1);
+            craftEffect = Fx.smeltsmoke;
             health = 120;
             craftTime = 120f;
             size = 2;
@@ -68,7 +69,7 @@ public class VEXBlocks implements ContentList{
             consumes.power(1f);
         }};
 
-        pyratiteFactory = new GenericCrafter("pyratite-factory"){{
+        pyratiteBlender = new GenericCrafter("pyratite-blender"){{
             requirements(Category.crafting, with(Items.metaglass, 75, Items.copper, 250, Items.titanium, 75));
             outputItem = new ItemStack(Items.pyratite, 3);
             health = 175;
@@ -121,7 +122,7 @@ public class VEXBlocks implements ContentList{
                 Items.surgeAlloy, Bullets.fragSurge
                 //todo: add titanium
             );
-            maxAmmo = 10;
+            maxAmmo = 100;
             ammoPerShot = 10;
             coolantMultiplier = 0.5f;
             targetGround = false;
@@ -133,6 +134,7 @@ public class VEXBlocks implements ContentList{
             spread = 8f;
             alternate = true;
             shootShake = 3f;
+            shootSound = VEXSounds.autoCannonShot;
             shots = 2;
             size = 3;
             range = 300f;

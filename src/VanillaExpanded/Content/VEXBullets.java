@@ -2,6 +2,8 @@ package VanillaExpanded.Content;
 
 import arc.graphics.*;
 import mindustry.ctype.*;
+import mindustry.content.Fx;
+import mindustry.gen.Sounds;
 import mindustry.entities.bullet.*;
 import mindustry.entities.effect.*;
 import mindustry.graphics.*;
@@ -32,14 +34,12 @@ public class VEXBullets implements ContentList{
                 width = 7f;
                 height = 18f;
                 buildingDamageMultiplier = 0f;
-                shootEffect = Fx.shootBig;
             }};
             autoCannonThorium = new BasicBulletType(12f, 120, "bullet"){{
                 hitSize = 3;
                 width = 9f;
                 height = 18f;
                 buildingDamageMultiplier = 0f;
-                shootEffect = Fx.shootBig;
             }};
         }
 }
