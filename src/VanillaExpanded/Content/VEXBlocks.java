@@ -120,7 +120,6 @@ public class VEXBlocks implements ContentList{
                 Items.thorium, VEXBullets.autoCannonThorium,
                 Items.graphite, VEXBullets.autoCannonDense,
                 Items.surgeAlloy, Bullets.fragSurge
-                //todo: add titanium
             );
             maxAmmo = 100;
             ammoPerShot = 10;

@@ -33,18 +33,15 @@ public class VEXTechtree implements ContentList{
             node(supercoolant)
         );
 
-        //Crafters 
-        getNode(cryofluidMixer, () -> 
-            node(supercoolantRefinery)    
-        );
-
+        //Crafters
         getNode(pyratiteMixer, () ->
                 node(pyratiteBlender)
         );
 
-        getNode(plastaniumCompressor, () -> 
-            node(insulatorPress)
-        );
+        getNode(plastaniumCompressor, () ->
+                node(insulatorPress, () ->
+                    node(supercoolantRefinery)
+        ));
 
         //Turrets
         getNode(cyclone, () ->
