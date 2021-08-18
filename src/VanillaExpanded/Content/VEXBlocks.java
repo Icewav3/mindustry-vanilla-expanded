@@ -136,7 +136,7 @@ public class VEXBlocks implements ContentList{
             shootSound = VEXSounds.autoCannonShot;
             shots = 2;
             size = 3;
-            range = 300f;
+            range = 375f;
             shootCone = 18f;
             inaccuracy = 1f;
             health = size * size * 100;
