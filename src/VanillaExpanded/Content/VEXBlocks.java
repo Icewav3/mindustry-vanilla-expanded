@@ -31,12 +31,15 @@ public class VEXBlocks implements ContentList{
     //Reserve
         
         ;
+    //LOCALIZED NAME USES CAPITAL CASE
 
     @Override
     public void load(){
         int wallHealthMultiplier = 4;
         //Crafters
         supercoolantRefinery = new LiquidConverter("supercoolant-refinery"){{
+            localizedName = "Supercoolant Refinery";
+            description = "Uses Insulator to cool down cryofluid into Supercoolant";
             requirements(Category.crafting, with(Items.surgeAlloy, 25, Items.silicon, 30, Items.titanium, 120));
             outputLiquid = new LiquidStack(VEXLiquid.supercoolant, 0.2f);
             health = 320;
@@ -56,6 +59,8 @@ public class VEXBlocks implements ContentList{
         }};
 
         insulatorPress = new GenericCrafter("insulator-press"){{
+            localizedName = "Insulator Press";
+            description = "Creates Insulators from silicon and plastanium";
             requirements(Category.crafting, with(Items.metaglass, 30, Items.plastanium, 50, Items.titanium, 120));
             outputItem = new ItemStack(VEXItems.insulator, 1);
             craftEffect = Fx.smeltsmoke;
@@ -70,6 +75,8 @@ public class VEXBlocks implements ContentList{
         }};
 
         pyratiteBlender = new GenericCrafter("pyratite-blender"){{
+            localizedName = "Pyratite Blender";
+            description = "A version of the pyratite mixer that has been adapted to produce more pyratite, however this resulted in a different way of producing it";
             requirements(Category.crafting, with(Items.metaglass, 75, Items.copper, 250, Items.titanium, 75));
             outputItem = new ItemStack(Items.pyratite, 3);
             health = 175;
@@ -86,6 +93,8 @@ public class VEXBlocks implements ContentList{
         //Defense
         
         forceDome = new ForceProjector("force-dome"){{
+            localizedName = "Force Dome";
+            description = "Leaps in shield technology allows for further ranges and increased shield durability, as long as its cooled";
             requirements(category.effect, with(Items.surgeAlloy, 250, Items.plastanium, 525, VEXItems.insulator, 125));
             size = 5;
             phaseRadiusBoost = 160f;
@@ -100,30 +109,36 @@ public class VEXBlocks implements ContentList{
         }};
 
         insulatorWall = new Wall("insulator-wall"){{
+            localizedName = "Insulator Wall";
+            description = " A wall that protects against fire and electricity";
             requirements(Category.defense, with(VEXItems.insulator, 6));
             health = 162 * wallHealthMultiplier;
             insulated = true;
         }};
 
         insulatorWallLarge = new Wall("insulator-wall-large"){{
+            localizedName = "Large Insulator Wall";
+            description = " A wall that protects against fire and electricity";
             requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 4));
             health = 162 * 4 * wallHealthMultiplier;
             size = 2;
             insulated = true;
         }};
 
-        //Turret
+        //Turrets
 
         thunderbird = new ItemTurret("thunderbird"){{
-            requirements(Category.turret, with(VEXItems.insulator, 25, Items.titanium, 250, Items.surgeAlloy, 50));
+            localizedName = "Thunderbird";
+            description = "A high caliber autocannon that fires high velocity projectiles against air units";
+            requirements(Category.turret, with(VEXItems.insulator, 25, Items.plastanium, 125, Items.thorium, 250, Items.copper, 600));
             ammo(
                 Items.thorium, VEXBullets.autoCannonThorium,
                 Items.graphite, VEXBullets.autoCannonDense,
-                Items.surgeAlloy, Bullets.fragSurge //define the surge bullet type
+                Items.surgeAlloy, VEXBullets.autoCannonSurge
             );
-            maxAmmo = 20;
-            ammoPerShot = 10;
-            coolantMultiplier = 0.5f;
+            maxAmmo = 10;
+            ammoPerShot = 5;
+            coolantMultiplier = 0.9f;
             targetGround = false;
             rotateSpeed = 1.5f;
             ammoUseEffect = Fx.casing3;
@@ -136,7 +151,7 @@ public class VEXBlocks implements ContentList{
             shootSound = VEXSounds.autoCannonShot;
             shots = 2;
             size = 3;
-            range = 375f;
+            range = 425f;
             shootCone = 18f;
             inaccuracy = 1f;
             health = size * size * 100;
