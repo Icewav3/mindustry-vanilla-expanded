@@ -12,7 +12,9 @@ public class VEXItems implements ContentList {
     @Override
     public void load(){
         insulator = new Item("item-insulator", Color.valueOf("d42400")){{
-            flammability = 32f;
+            localizedName = "Insulator";
+            description = " An item that slows down the effects of electricity and heat";
+            flammability = 0f;
         }};
 
     };
