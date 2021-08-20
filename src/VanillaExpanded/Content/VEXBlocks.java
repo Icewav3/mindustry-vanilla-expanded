@@ -21,7 +21,7 @@ public class VEXBlocks implements ContentList{
     public static Block 
     
     //Crafting Blocks
-        insulatorPress, pyratiteBlender,
+        insulatorPress,
     //Liquid Makers
         supercoolantRefinery,
     //Defense
@@ -72,22 +72,6 @@ public class VEXBlocks implements ContentList{
             solid = true;
             consumes.items(with(Items.silicon, 1, Items.plastanium, 1));
             consumes.power(1f);
-        }};
-
-        pyratiteBlender = new GenericCrafter("pyratite-blender"){{
-            localizedName = "Pyratite Blender";
-            description = "A version of the pyratite mixer that has been adapted to produce more pyratite, however this resulted in a different way of producing it";
-            requirements(Category.crafting, with(Items.metaglass, 75, Items.copper, 250, Items.titanium, 75));
-            outputItem = new ItemStack(Items.pyratite, 3);
-            health = 175;
-            itemCapacity = 20;
-            craftTime = 60f;
-            size = 3;
-            hasItems = true;
-            hasPower = true;
-            solid = true;
-            consumes.items(with(Items.scrap, 10, Items.sporePod, 5));
-            consumes.power(2f);
         }};
 
         //Defense
