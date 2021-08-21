@@ -1,5 +1,6 @@
 package VanillaExpanded.Content;
 
+import VanillaExpanded.world.*;
 import mindustry.graphics.Pal;
 import mindustry.content.*;
 import mindustry.ctype.ContentList;
@@ -76,6 +77,7 @@ public class VEXBlocks implements ContentList{
             consumes.items(with(Items.silicon, 1, Items.plastanium, 1));
             consumes.power(1f);
         }};
+
         //Power generators
 
         surgeCatalyzer = new chargeDecayGenerator("surge-catalyzer"){{
