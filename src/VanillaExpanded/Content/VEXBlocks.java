@@ -1,6 +1,5 @@
 package VanillaExpanded.Content;
 
-import VanillaExpanded.world.*;
 import mindustry.graphics.Pal;
 import mindustry.content.*;
 import mindustry.ctype.ContentList;
@@ -18,6 +17,8 @@ import mindustry.content.Bullets;
 import mindustry.gen.Sounds;
 
 import static mindustry.type.ItemStack.*;
+
+import VanillaExpanded.world.chargeDecayGenerator;
 
 public class VEXBlocks implements ContentList{
     public static Block 
@@ -90,7 +91,6 @@ public class VEXBlocks implements ContentList{
             hasPower = true;
             solid = true;
             powerProduction = 2.5f;
-            consumes.itemswith(Items.surgeAlloy, 1);
             itemDuration = 60 * 27;
             ambientSound = Sounds.smelter; //need sound file
             ambientSoundVolume = 0.06f;

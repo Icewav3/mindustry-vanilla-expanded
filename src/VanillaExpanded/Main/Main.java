@@ -31,8 +31,8 @@ public class Main extends Mod {
     public void loadContent(){
         //Load Content Here.
         //DO NOT REARRANGE
-        new VEXBullets().load();
         new VEXSounds().load();
+        new VEXBullets().load();
         new VEXItems().load();
         new VEXLiquid().load();
         new VEXBlocks().load();

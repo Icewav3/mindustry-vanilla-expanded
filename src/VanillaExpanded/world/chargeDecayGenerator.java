@@ -13,8 +13,6 @@ public class chargeDecayGenerator extends ItemLiquidGenerator {
 
     @Override
     protected float getItemEfficiency(Item item){
-        return item.radioactivity;
+        return item.charge;
     }
-}
-    
 }
