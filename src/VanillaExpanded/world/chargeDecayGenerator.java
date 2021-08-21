@@ -1,4 +1,4 @@
-package VanillaExpanded.world.blocks.power;
+package VanillaExpanded.world;
 
 import mindustry.world.blocks.power.*;
 import mindustry.type.*;

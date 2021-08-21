@@ -33,8 +33,9 @@ public class VEXTechtree implements ContentList{
             node(supercoolant)
         );
         //Power generators
-        getNode(surgeSmelter), () ->
-                node(surgeCatalyzer)
+        getNode(surgeSmelter, () ->
+            node(surgeCatalyzer)
+
         );
         //Crafters
 
