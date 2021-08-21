@@ -24,6 +24,8 @@ public class VEXBlocks implements ContentList{
         insulatorPress,
     //Liquid Makers
         supercoolantRefinery,
+    //Power generators
+        surgeCatalyzer,
     //Defense
         insulatorWall, insulatorWallLarge, forceDome,
     //Turrets
@@ -73,6 +75,23 @@ public class VEXBlocks implements ContentList{
             consumes.items(with(Items.silicon, 1, Items.plastanium, 1));
             consumes.power(1f);
         }};
+        //Power generators
+
+        surgeCatalyzer = new BurnerGenerator("surge-catalyzer"){{
+            localizedName = "Surge Catalyzer";
+            description = "A device that provides an optimal enviroment for surge to react within it to provide power, it's very efficient but produces little power at a time";
+            requirements(category.effect, with(Items.titanium, 75, Items.lead, 250, VEXItems.insulator, 15));
+            size = 2;
+            health = 60 * 9;
+            hasItems = true;
+            hasPower = true;
+            solid = true;
+            powerProduction = 2.5f;
+            consumes.itemswith(Items.surgeAlloy, 1);
+            itemDuration = 60 * 27;
+            ambientSound = Sounds.smelter; //need sound file
+            ambientSoundVolume = 0.06f;
+        }};
 
         //Defense
         
@@ -114,7 +133,7 @@ public class VEXBlocks implements ContentList{
         thunderbird = new ItemTurret("thunderbird"){{
             localizedName = "Thunderbird";
             description = "A high caliber autocannon that fires high velocity projectiles against air units";
-            requirements(Category.turret, with(VEXItems.insulator, 25, Items.plastanium, 125, Items.thorium, 250, Items.copper, 600));
+            requirements(Category.turret, with(Items.graphite, 75, Items.titanium, 250, Items.thorium, 125, Items.lead, 175));
             ammo(
                 Items.thorium, VEXBullets.autoCannonThorium,
                 Items.graphite, VEXBullets.autoCannonDense,

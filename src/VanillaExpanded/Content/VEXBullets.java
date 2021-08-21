@@ -30,31 +30,31 @@ public class VEXBullets implements ContentList{
                 damage = 0.2f;
             }};
             //Autocannon
-            autoCannonDense = new BasicBulletType(12f, 110, "bullet"){{
+            autoCannonDense = new BasicBulletType(12f, 80, "bullet"){{
                 hitSize = 3;
                 width = 7f;
                 height = 24f;
                 collidesGround =  false;
-                knockback = 8f;
+                knockback = 2f;
             }};
-            autoCannonThorium = new BasicBulletType(12f, 180, "bullet"){{
+            autoCannonThorium = new BasicBulletType(12f, 150, "bullet"){{
                 hitSize = 3;
                 width = 9f;
                 height = 24f;
                 collidesGround =  false;
-                knockback = 8f;
+                knockback = 4f;
                 pierce = true;
                 pierceCap = 3;
             }};
-            autoCannonSurge = new BasicBulletType(12f, 240, "bullet"){{
+            autoCannonSurge = new BasicBulletType(12f, 120, "bullet"){{
                 hitSize = 3;
                 width = 7f;
                 height = 24f;
                 collidesGround =  false;
-                knockback = 8f;
+                knockback = 4f;
                 pierce = true;
                 pierceCap = 3;
-                splashDamage = 180f;
+                splashDamage = 100;
                 splashDamageRadius = 3f;
                 lightning = 3;
                 lightningLength = 15;
