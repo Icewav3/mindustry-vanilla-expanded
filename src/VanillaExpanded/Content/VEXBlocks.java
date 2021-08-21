@@ -7,6 +7,7 @@ import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.type.LiquidStack;
 import mindustry.world.Block;
+import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.defense.*;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.production.*;
@@ -77,7 +78,7 @@ public class VEXBlocks implements ContentList{
         }};
         //Power generators
 
-        surgeCatalyzer = new BurnerGenerator("surge-catalyzer"){{
+        surgeCatalyzer = new chargeDecayGenerator("surge-catalyzer"){{
             localizedName = "Surge Catalyzer";
             description = "A device that provides an optimal enviroment for surge to react within it to provide power, it's very efficient but produces little power at a time";
             requirements(category.effect, with(Items.titanium, 75, Items.lead, 250, VEXItems.insulator, 15));
