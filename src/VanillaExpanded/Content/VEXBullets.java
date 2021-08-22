@@ -35,6 +35,7 @@ public class VEXBullets implements ContentList{
                 width = 7f;
                 height = 24f;
                 collidesGround =  false;
+                ammoMultiplier = 1f;
                 knockback = 2f;
             }};
             autoCannonThorium = new BasicBulletType(12f, 150, "bullet"){{
@@ -42,6 +43,7 @@ public class VEXBullets implements ContentList{
                 width = 9f;
                 height = 24f;
                 collidesGround =  false;
+                ammoMultiplier = 1f;
                 knockback = 4f;
                 pierce = true;
                 pierceCap = 3;
@@ -51,6 +53,7 @@ public class VEXBullets implements ContentList{
                 width = 7f;
                 height = 24f;
                 collidesGround =  false;
+                ammoMultiplier = 1f;
                 knockback = 4f;
                 pierce = true;
                 pierceCap = 3;
