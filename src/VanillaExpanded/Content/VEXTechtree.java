@@ -44,6 +44,10 @@ public class VEXTechtree implements ContentList{
                     node(supercoolantRefinery)
         ));
 
+        getNode(cultivator, () ->
+                node(sporeFarm)
+        );
+
         //Turrets
         getNode(cyclone, () ->
             node(thunderbird)
