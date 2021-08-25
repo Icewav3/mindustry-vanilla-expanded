@@ -109,7 +109,7 @@ public class VEXBlocks implements ContentList{
         surgeCatalyzer = new chargeDecayGenerator("surge-catalyzer"){{
             localizedName = "Surge Catalyzer";
             description = "A device that provides an optimal enviroment for surge to react within it to provide power, it's very efficient but produces little power at a time";
-            requirements(category.effect, with(Items.titanium, 75, Items.lead, 250, VEXItems.insulator, 15));
+            requirements(category.power, with(Items.titanium, 75, Items.lead, 250, VEXItems.insulator, 15));
             size = 2;
             health = 60 * 9;
             hasItems = true;
