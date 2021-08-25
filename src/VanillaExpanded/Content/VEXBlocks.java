@@ -13,6 +13,7 @@ import mindustry.world.blocks.defense.*;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
+import mindustry.world.meta.*;
 import mindustry.entities.bullet.*;
 import mindustry.content.Bullets;
 import mindustry.gen.Sounds;
@@ -111,7 +112,7 @@ public class VEXBlocks implements ContentList{
             solid = true;
             drawer = new DrawCultivator();
             craftEffect = Fx.none;
-            envRequired = Env.spores;
+            envRequired |= Env.spores;
             attribute = Attribute.spores;
             maxBoost = 2f;
             consumes.power(160f / 120f);
