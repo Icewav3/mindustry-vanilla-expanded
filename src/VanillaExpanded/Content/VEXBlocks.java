@@ -81,6 +81,29 @@ public class VEXBlocks implements ContentList{
             consumes.power(1f);
         }};
 
+        sporeFarm = new AttributeCrafter("spore-farm"){{
+            localizedName = "Spore Farm";
+            description = "Cultivates tiny concentrations of atmospheric spores into spore pods.";
+            requirements(Category.production, with(Items.metaglass, 50, Items.titanium, 100, Items.lead, 300));
+            outputItem = new ItemStack(Items.sporePod, 1);
+            health = 180;
+            size = 3;
+            craftTime = 12f;
+            hasPower = true;
+            hasItems = true;
+            hasLiquids = true;
+            rotate = false;
+            solid = true;
+            drawer = new DrawCultivator();
+            craftEffect = Fx.none;
+            envRequired |= Env.spores;
+            attribute = Attribute.spores;
+            maxBoost = 1f;
+            consumes.power(160f / 120f);
+            consumes.liquid(Liquids.water, 40f / 120f);
+        }};
+        
+
         //Power generators
 
         surgeCatalyzer = new chargeDecayGenerator("surge-catalyzer"){{
@@ -97,28 +120,6 @@ public class VEXBlocks implements ContentList{
             ambientSound = Sounds.smelter; //need sound file
             ambientSoundVolume = 0.06f;
         }};
-
-        sporeFarm = new AttributeCrafter("spore-farm"){{
-            localizedName = "Spore Farm";
-            description = "Cultivates tiny concentrations of atmospheric spores into spore pods.";
-            requirements(Category.production, with(Items.metaglass, 50, Items.titanium, 100, Items.lead, 300));
-            health = 180;
-            size = 3;
-            craftTime = 12f;
-            hasPower = true;
-            hasItems = true;
-            hasLiquids = true;
-            rotate = false;
-            solid = true;
-            drawer = new DrawCultivator();
-            craftEffect = Fx.none;
-            envRequired |= Env.spores;
-            attribute = Attribute.spores;
-            maxBoost = 2f;
-            consumes.power(160f / 120f);
-            consumes.liquid(Liquids.water, 40f / 120f);
-        }};
-        
 
         //Defense
         
