@@ -9,6 +9,7 @@ import mindustry.type.ItemStack;
 import mindustry.type.LiquidStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.power.*;
+import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.defense.*;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.production.*;
@@ -24,7 +25,8 @@ import VanillaExpanded.world.chargeDecayGenerator;
 
 public class VEXBlocks implements ContentList{
     public static Block 
-    
+    //conveyors
+        insulatedConveyor,
     //Crafting Blocks
         insulatorPress,
     //Liquid Makers
@@ -43,10 +45,19 @@ public class VEXBlocks implements ContentList{
     @Override
     public void load(){
         int wallHealthMultiplier = 4;
+        //Distribution
+        insulatedConveyor = new Conveyor("insulated-conveyor"){{
+            localizedName = "Insulated Conveyor";
+            description = "An insulated conveyor belt that will prevent fires upon destruction and will prevent fire spread.";
+            requirements(Category.distribution, with(Items.titanium, 1, Items.lead, 1, VEXItems.insulator, 1));
+            health = 85;
+            speed = 0.08f;
+            displayedSpeed = 11f;
+        }};
         //Crafters
         supercoolantRefinery = new LiquidConverter("supercoolant-refinery"){{
             localizedName = "Supercoolant Refinery";
-            description = "Uses Insulator to cool down cryofluid into Supercoolant";
+            description = "Uses Insulator to cool down cryofluid into Supercoolant.";
             requirements(Category.crafting, with(Items.surgeAlloy, 25, Items.silicon, 30, Items.titanium, 120));
             outputLiquid = new LiquidStack(VEXLiquid.supercoolant, 0.2f);
             health = 320;
@@ -67,7 +78,7 @@ public class VEXBlocks implements ContentList{
 
         insulatorPress = new GenericCrafter("insulator-press"){{
             localizedName = "Insulator Press";
-            description = "Creates Insulators from silicon and plastanium";
+            description = "Creates Insulators from silicon and plastanium.";
             requirements(Category.crafting, with(Items.metaglass, 30, Items.plastanium, 50, Items.titanium, 120));
             outputItem = new ItemStack(VEXItems.insulator, 1);
             craftEffect = Fx.smeltsmoke;
@@ -108,7 +119,7 @@ public class VEXBlocks implements ContentList{
 
         surgeCatalyzer = new chargeDecayGenerator("surge-catalyzer"){{
             localizedName = "Surge Catalyzer";
-            description = "A device that provides an optimal enviroment for surge to react within it to provide power, it's very efficient but produces little power at a time";
+            description = "A device that provides an optimal enviroment for surge to react within it to provide power, it's very efficient but produces little power at a time.";
             requirements(category.power, with(Items.titanium, 75, Items.lead, 250, VEXItems.insulator, 15));
             size = 2;
             health = 60 * 9;
@@ -125,7 +136,7 @@ public class VEXBlocks implements ContentList{
         
         forceDome = new ForceProjector("force-dome"){{
             localizedName = "Force Dome";
-            description = "Leaps in shield technology allows for further ranges and increased shield durability, as long as its cooled";
+            description = "Leaps in shield technology allows for further ranges and increased shield durability, as long as its cooled.";
             requirements(category.effect, with(Items.surgeAlloy, 250, Items.plastanium, 525, VEXItems.insulator, 125));
             size = 5;
             phaseRadiusBoost = 160f;
@@ -141,7 +152,7 @@ public class VEXBlocks implements ContentList{
 
         insulatorWall = new Wall("insulator-wall"){{
             localizedName = "Insulator Wall";
-            description = " A wall that protects against fire and electricity";
+            description = " A wall that protects against fire and electricity.";
             requirements(Category.defense, with(VEXItems.insulator, 6));
             health = 162 * wallHealthMultiplier;
             insulated = true;
@@ -149,7 +160,7 @@ public class VEXBlocks implements ContentList{
 
         insulatorWallLarge = new Wall("insulator-wall-large"){{
             localizedName = "Large Insulator Wall";
-            description = " A wall that protects against fire and electricity";
+            description = " A wall that protects against fire and electricity.";
             requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 4));
             health = 162 * 4 * wallHealthMultiplier;
             size = 2;
@@ -160,7 +171,7 @@ public class VEXBlocks implements ContentList{
 
         thunderbird = new ItemTurret("thunderbird"){{
             localizedName = "Thunderbird";
-            description = "A high caliber autocannon that fires high velocity projectiles against air units";
+            description = "A high caliber autocannon that fires high velocity projectiles against air units.";
             requirements(Category.turret, with(Items.graphite, 75, Items.titanium, 250, Items.thorium, 125, Items.lead, 175));
             ammo(
                 Items.thorium, VEXBullets.autoCannonThorium,
