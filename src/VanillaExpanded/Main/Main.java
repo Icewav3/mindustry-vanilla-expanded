@@ -36,6 +36,7 @@ public class Main extends Mod {
         new VEXItems().load();
         new VEXLiquid().load();
         new VEXBlocks().load();
+        //new VEXUnitType().load();
         new VEXTechtree().load();
         
 }
