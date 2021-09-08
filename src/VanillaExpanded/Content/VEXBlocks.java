@@ -18,6 +18,7 @@ import mindustry.world.meta.*;
 import mindustry.entities.bullet.*;
 import mindustry.content.Bullets;
 import mindustry.gen.Sounds;
+import arc.graphics.*;
 
 import static mindustry.type.ItemStack.*;
 
@@ -85,6 +86,7 @@ public class VEXBlocks implements ContentList{
             health = 120;
             craftTime = 120f;
             size = 2;
+            drawer = new DrawSmelter(Color.valueOf("6ecdec"));
             hasItems = true;
             hasPower = true;
             solid = true;
