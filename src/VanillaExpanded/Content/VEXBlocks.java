@@ -1,5 +1,6 @@
 package VanillaExpanded.Content;
 
+import VanillaExpanded.world.block.defence.*;
 import mindustry.graphics.Pal;
 import mindustry.content.*;
 import mindustry.ctype.ContentList;
@@ -47,7 +48,7 @@ public class VEXBlocks implements ContentList{
     public void load(){
         int wallHealthMultiplier = 4;
         //Distribution
-        insulatedConveyor = new Conveyor("insulated-conveyor"){{
+        insulatedConveyor = new FireResistConveyor("insulated-conveyor"){{
             localizedName = "Insulated Conveyor";
             description = "An insulated conveyor belt that will prevent fires upon destruction and will prevent fire spread.";
             requirements(Category.distribution, with(Items.titanium, 1, Items.lead, 1, VEXItems.insulator, 1));
@@ -152,7 +153,7 @@ public class VEXBlocks implements ContentList{
             consumes.power(17f);
         }};
 
-        insulatorWall = new Wall("insulator-wall"){{
+        insulatorWall = new FireResistWall("insulator-wall"){{
             localizedName = "Insulator Wall";
             description = " A wall that protects against fire and electricity.";
             requirements(Category.defense, with(VEXItems.insulator, 6));
@@ -160,7 +161,7 @@ public class VEXBlocks implements ContentList{
             insulated = true;
         }};
 
-        insulatorWallLarge = new Wall("insulator-wall-large"){{
+        insulatorWallLarge = new FireResistWall("insulator-wall-large"){{
             localizedName = "Large Insulator Wall";
             description = " A wall that protects against fire and electricity.";
             requirements(Category.defense, ItemStack.mult(insulatorWall.requirements, 4));

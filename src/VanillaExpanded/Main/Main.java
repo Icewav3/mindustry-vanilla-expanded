@@ -5,6 +5,7 @@ import javax.xml.namespace.QName;
 
 //import VanillaExpanded.Content.ModLoader;
 import VanillaExpanded.Content.*;
+import VanillaExpanded.world.*;
 import arc.Events;
 import mindustry.game.EventType.ClientLoadEvent;
 import mindustry.game.EventType.WorldLoadEvent;
@@ -32,10 +33,11 @@ public class Main extends Mod {
         //Load Content Here.
         //DO NOT REARRANGE
         new VEXSounds().load();
-        new VEXBullets().load();
-        new VEXItems().load();
         new VEXLiquid().load();
+        new VEXItems().load();
+        new VEXBullets().load();
         new VEXBlocks().load();
+        new VEXFunctions().load();
         //new VEXUnitType().load();
         new VEXTechtree().load();
         
