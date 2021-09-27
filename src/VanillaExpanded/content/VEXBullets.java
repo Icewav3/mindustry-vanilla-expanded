@@ -1,13 +1,7 @@
-package VanillaExpanded.Content;
+package VanillaExpanded.content;
 
-import arc.graphics.*;
 import mindustry.ctype.*;
-import mindustry.content.Fx;
-import mindustry.gen.Sounds;
 import mindustry.entities.bullet.*;
-import mindustry.entities.effect.*;
-import mindustry.graphics.*;
-import mindustry.entities.*; //these are all bullets
 
 public class VEXBullets implements ContentList{
     public static BulletType 

@@ -1,23 +1,18 @@
-package VanillaExpanded.Content;
+package VanillaExpanded.content;
 
-import VanillaExpanded.world.block.defence.*;
-import mindustry.graphics.Pal;
+import VanillaExpanded.world.block.defence.FireResistConveyor;
+import VanillaExpanded.world.block.defence.FireResistWall;
 import mindustry.content.*;
 import mindustry.ctype.ContentList;
-import mindustry.ctype.Content;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.type.LiquidStack;
 import mindustry.world.Block;
-import mindustry.world.blocks.power.*;
-import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.defense.*;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
-import mindustry.entities.bullet.*;
-import mindustry.content.Bullets;
 import mindustry.gen.Sounds;
 import arc.graphics.*;
 

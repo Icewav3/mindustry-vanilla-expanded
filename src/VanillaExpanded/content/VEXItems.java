@@ -1,8 +1,7 @@
-package VanillaExpanded.Content;
+package VanillaExpanded.content;
 
 import arc.graphics.*;
 import mindustry.ctype.*;
-import mindustry.graphics.Pal;
 import mindustry.type.*;
 
 public class VEXItems implements ContentList {

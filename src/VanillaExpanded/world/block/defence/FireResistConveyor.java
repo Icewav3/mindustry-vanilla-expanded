@@ -1,4 +1,4 @@
-package VanillaExpanded.Content;
+package VanillaExpanded.world.block.defence;
 
 import mindustry.world.blocks.distribution.Conveyor;
 import mindustry.entities.Fires;

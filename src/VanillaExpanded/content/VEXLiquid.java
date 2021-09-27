@@ -1,11 +1,9 @@
-package VanillaExpanded.Content;
+package VanillaExpanded.content;
 
 import mindustry.content.*;
 import arc.graphics.*;
 import mindustry.ctype.*;
 import mindustry.type.*;
-import mindustry.graphics.Pal;
-import mindustry.content.Liquids;
 
 public class VEXLiquid implements ContentList{
     public static Liquid

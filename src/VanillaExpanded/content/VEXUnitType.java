@@ -1,32 +1,11 @@
-package VanillaExpanded.Content;
-import arc.graphics.*;
-import arc.graphics.g2d.*;
-import arc.math.*;
-import arc.struct.*;
-import mindustry.ai.types.*;
+package VanillaExpanded.content;
 import mindustry.ctype.*;
-import mindustry.entities.*;
-import mindustry.entities.abilities.*;
-import mindustry.entities.bullet.*;
-import mindustry.entities.effect.*;
-import mindustry.game.EventType.TurretAmmoDeliverEvent;
-import mindustry.gen.*;
-import mindustry.graphics.*;
 import mindustry.type.*;
 import mindustry.type.ammo.*;
-import mindustry.type.weapons.*;
-import mindustry.world.meta.*;
 import mindustry.content.Bullets;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.type.UnitType;
-
-import static arc.graphics.g2d.Draw.*;
-import static arc.graphics.g2d.Lines.*;
-import static arc.math.Angles.*;
-import static mindustry.Vars.*;
-
-import VanillaExpanded.Content.VEXUnits.Ai.*;
 
 public class VEXUnitType implements ContentList{
     public static UnitType 
