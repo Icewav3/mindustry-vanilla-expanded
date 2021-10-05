@@ -1,12 +1,13 @@
-package VanillaExpanded.Content;
+package VanillaExpanded.content;
 
 import arc.Core;
 import arc.assets.AssetDescriptor;
 import arc.assets.loaders.SoundLoader;
 import arc.audio.Sound;
 import mindustry.Vars;
+import mindustry.ctype.ContentList;
 
-public class VEXSounds{
+public class VEXSounds implements ContentList {
 
     public static Sound 
        heimdallDeep = new Sound(),
@@ -26,6 +27,8 @@ public class VEXSounds{
             return sound;
         } else return new Sound();
     }
+
+    @Override
     public void load(){
         heimdallDeep = loadSound("heimdalldeep");
         heimdallBeam = loadSound("heimdallsuperlaser");

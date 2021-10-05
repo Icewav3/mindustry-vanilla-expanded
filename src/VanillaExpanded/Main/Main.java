@@ -1,21 +1,30 @@
 package VanillaExpanded.Main;
 
 
-import javax.xml.namespace.QName;
-
 //import VanillaExpanded.Content.ModLoader;
-import VanillaExpanded.Content.*;
-import arc.Events;
+import VanillaExpanded.content.*;
+        import arc.Events;
+import arc.struct.Seq;
+import mindustry.ctype.ContentList;
 import mindustry.game.EventType.ClientLoadEvent;
 import mindustry.game.EventType.WorldLoadEvent;
 import mindustry.mod.Mod;
-import arc.Events;
-import mindustry.Vars;
-import mindustry.ctype.ContentList;
-import mindustry.game.EventType.FileTreeInitEvent;
 
 
 public class Main extends Mod {
+
+    private final Seq<ContentList> contents = Seq.with(
+            //Load Content Here.
+            //DO NOT REARRANGE
+            new VEXSounds(),
+            new VEXLiquid(),
+            new VEXItems(),
+            new VEXBullets(),
+            new VEXBlocks(),
+            new VEXFunctions(),
+            new VEXTechtree()
+    );
+
     public Main(){
         Events.on(ClientLoadEvent.class, e -> {
         });
@@ -29,14 +38,6 @@ public class Main extends Mod {
     }
 
     public void loadContent(){
-        //Load Content Here.
-        //DO NOT REARRANGE
-        new VEXSounds().load();
-        new VEXBullets().load();
-        new VEXItems().load();
-        new VEXLiquid().load();
-        new VEXBlocks().load();
-        new VEXTechtree().load();
-        
-}
+        contents.each(ContentList::load);
+    }
 }

@@ -1,7 +1,6 @@
-package VanillaExpanded.Content;
+package VanillaExpanded.content;
 
 import arc.struct.Seq;
-import mindustry.content.SectorPresets;
 import mindustry.content.TechTree;
 import mindustry.content.TechTree.TechNode;
 import mindustry.ctype.ContentList;
@@ -10,9 +9,9 @@ import mindustry.game.Objectives.Objective;
 import mindustry.game.Objectives.*;
 import mindustry.type.ItemStack;
 
-import static VanillaExpanded.Content.VEXBlocks.*;
-import static VanillaExpanded.Content.VEXItems.*;
-import static VanillaExpanded.Content.VEXLiquid.*;
+import static VanillaExpanded.content.VEXBlocks.*;
+import static VanillaExpanded.content.VEXItems.*;
+import static VanillaExpanded.content.VEXLiquid.*;
 
 import static mindustry.content.Blocks.*;
 import static mindustry.content.Items.*;
@@ -43,6 +42,10 @@ public class VEXTechtree implements ContentList{
                 node(insulatorPress, () ->
                     node(supercoolantRefinery)
         ));
+
+        getNode(cultivator, () ->
+                node(sporeFarm)
+        );
 
         //Turrets
         getNode(cyclone, () ->
