@@ -4,7 +4,7 @@ Vanilla Expanded Modpack
 *Art by: Wolfette#6333*
 
 
-This mod is our first javascript mod and is a learning experience for us, so feel free to give constructive criticism. This mod is under active development.
+This mod is our first javascript mod and is a learning experience for us. This mod is finished and will no longer see continued devlopment.
 
 Current Content List:
 -
